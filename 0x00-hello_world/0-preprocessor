@@ -1,2 +1,2 @@
 #!/bin/bash
-C output
+gcc main.c -o c
