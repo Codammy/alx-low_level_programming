@@ -1,23 +1,11 @@
 #include <stdio.h>
-
-
-
-/**
- *
- *  * main - Entry point
- *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
-
-int main(void)
-
+	/**
+	 * added a headertfile
+	 * set main argument to void
+	 * return 0 added
+	 */ 
+	int main(void) 
 {
-
-		printf("Holberton School");
-
-			return (0);
-
+	printf("Holberton School");
+	return (0);
 }
