@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -E export CFILE=test.c -o c
+gcc -E $CFILE -o c
