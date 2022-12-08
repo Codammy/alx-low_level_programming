@@ -2,11 +2,11 @@
 
 /**
  * main - Entry point
- * puts - printing to stdo
+ * printf - printing to stdo
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
+	printf("with proper grammer, but the outcome is a piece of art");
 	return (0);
 }
