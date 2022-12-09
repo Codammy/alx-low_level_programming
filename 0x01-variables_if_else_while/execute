@@ -1,3 +1,4 @@
-#rm {*~,.*}
+rm {*~,.*}
 #chmod u+x
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89
+#gcc -Wall -pedantic -Werror -Wextra -std=gnu89
+git add .
