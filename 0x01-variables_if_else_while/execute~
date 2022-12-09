@@ -1,3 +1,0 @@
-#rm {*~,.*}
-#chmod u+x
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89
