@@ -7,12 +7,13 @@
  * Return: (0)
  */
 int main(void)
-{	
+{
 	int alphb = 97;
 
 	while (alphb <= 122)
 	{
 		putchar(alphb);
+		putchar("\n");
 		alphb++;
 	}
 	return (0);
