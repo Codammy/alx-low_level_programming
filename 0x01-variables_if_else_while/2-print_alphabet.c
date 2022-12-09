@@ -13,8 +13,9 @@ int main(void)
 	while (alphb <= 122)
 	{
 		putchar(alphb);
-		putchar("\n");
 		alphb++;
 	}
+
+	putchar('\n');
 	return (0);
 }
