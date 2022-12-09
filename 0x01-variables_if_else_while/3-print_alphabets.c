@@ -9,7 +9,8 @@
 int main(void)
 {
 	/* lower case */
-	int lower_c, capitalize; 
+	int lower_c, capitalize;
+
 	lower_c = 97;
 
 	while (lower_c <= 122)
