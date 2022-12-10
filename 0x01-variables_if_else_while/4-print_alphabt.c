@@ -9,32 +9,19 @@
 int main(void)
 {
 	/* lower case */
-	int lower_c;
+	int lower_c, val_for_q = 101;
 
 	lower_c = 97;
 
 	while (lower_c <= 122)
 	{
-		putchar(lower_c);
-		if (lower_c == 100)
-			break;
-		lower_c++;
-	}
+		if (lower_c == val_for_q)
+		{
+			lower_c++;
+			val_for_q += 12;
 
-	lower_c = 102;
-
-	while (lower_c <= 122)
-	{
-		putchar(lower_c);
-		if (lower_c == 112)
-			break;
-		lower_c++;
+			continue;
 		}
-
-	lower_c = 114;
-
-	while (lower_c <= 122)
-	{
 		putchar(lower_c);
 		lower_c++;
 	}
