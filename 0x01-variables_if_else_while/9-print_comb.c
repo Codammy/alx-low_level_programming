@@ -9,12 +9,19 @@
 int main(void)
 {
 	int i = 48;
+	int j = i - 1;
 
 	while (i <= 57)
 	{
 		putchar(i);
-		putchar(',');
-		putchar(' ');
+		while (j < i)
+		{
+			if (j == 56)
+				break;
+			putchar(',');
+			putchar(' ');
+			j++;
+		}
 		i++;
 	}
 	putchar('\n');
