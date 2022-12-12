@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - printing all possible number combination of two digits
+ * main -printing all possible number combination of two digits
  *
  * Return : (0)
  */
+/* main - Entry point */
 int main(void)
 {
 	int i, j;
