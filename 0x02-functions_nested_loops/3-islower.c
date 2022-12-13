@@ -2,14 +2,14 @@
 #include "main.h"
 /**
  * _islower - check for upper or lower case
- *
- * Return: 1 or 0.
+ *@c: anything
+ * Return: 0
  */
 int _islower(int c)
 {
 	int a;
 
-	for (a = 97; a <=122; a++)
+	for (a = 97; a <= 122; a++)
 	{
 		if ((c >= a) || (c >= a))
 			return (1);
