@@ -1,12 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * _abs - prints absolute value of n
+ * _abs - p
  * @n: param
- * Return: 0
+ * Return: x
  */
 int _abs(int n)
 {
-	abs(n);
-	return (0);
+	int x = abs(n);
+
+	return (x);
 }
