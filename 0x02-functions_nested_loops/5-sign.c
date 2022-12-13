@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_sign - check for presence of letter
- * @n: param 
+ * @n: param
  * Return: 0
  */
 int print_sign(int n)
