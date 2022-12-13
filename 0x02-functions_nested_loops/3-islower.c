@@ -7,14 +7,6 @@
  */
 int _islower(int c)
 {
-	int a;
-
-	for (a = 97; a <= 122; a++)
-	{
-		if ((c >= a) || (c <= a))
-			return (1);
-		else
-			return (0);
-	}
+	islower(c);
 	return (c);
 }
