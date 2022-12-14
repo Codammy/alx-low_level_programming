@@ -13,7 +13,7 @@ int print_last_digit(int n)
 	int z = 88;
 
 	_putchar(k + '0');
-	if (k == INT_MAX)
+	if (k == INT_MIN)
 		return (z);
 	else
 		return (k);
