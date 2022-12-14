@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * print_last_digit - using modulos
  * @n: param
@@ -6,7 +7,9 @@
  */
 int print_last_digit(int n)
 {
-	n % 10;
+	int l = abs(n);
+	int k = (l % 10);
 
-//	return (0);
+	_putchar(k + '0');
+	return (k);
 }

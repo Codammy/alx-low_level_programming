@@ -1,5 +1,4 @@
-#include <ctype.h>
+#include "main.h"
 int main(){
-	int x = 
-	return x;
+	_putchar(1548%10);	
 }
