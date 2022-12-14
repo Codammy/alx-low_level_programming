@@ -9,7 +9,11 @@ int print_last_digit(int n)
 {
 	int l = abs(n);
 	int k = (l % 10);
+	int z = 88;
 
 	_putchar(k + '0');
-	return (k);
+	if (k == INT_MAX)
+		return (z);
+	else
+		return (k);
 }
