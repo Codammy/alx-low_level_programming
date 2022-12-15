@@ -1,4 +1,0 @@
-rm {*~,*.}
-git add .
-git commit -m 'debugging days'
-git push
