@@ -1,5 +1,5 @@
 rm {*~,*.}
 git restore .gitignore
 git add .
-git commit -m 'debugging days'
+git commit -m 'more functions'
 git push
