@@ -5,7 +5,7 @@
  * do not print 4 and 9
  * Return: 0.
  */
-void print__most_numbers(void)
+void print_most_numbers(void)
 {
 	int i;
 
@@ -13,7 +13,7 @@ void print__most_numbers(void)
 	{
 	if (i == 4 || i == 9)
 		continue;
-	putchar(i + '0');
+	_putchar(i + '0');
 	}
 	_putchar('\n');
 }
