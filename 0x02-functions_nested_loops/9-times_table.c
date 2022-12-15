@@ -7,9 +7,11 @@
  */
 void times_table(void)
 {
-for (int x = 0; x <= 9; x++)
+	int x, j;
+
+for (x = 0; x <= 9; x++)
 {
-for (int j = 0; j < 10; j++)
+for (j = 0; j < 10; j++)
 {
 if (j * x < 10)
 {
