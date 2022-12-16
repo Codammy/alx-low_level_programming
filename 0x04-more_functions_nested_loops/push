@@ -1,5 +1,5 @@
-rm {*~,*.}
+rm {*~,.*}
 git restore .gitignore
 git add .
-git commit -m 'more functions'
+git commit -m 'more c functions'
 git push
