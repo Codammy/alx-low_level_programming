@@ -1,23 +1,24 @@
 #include "main.h"
 
 /**
- * print_diagonal - prints character \ to stdo
- * @n: parameter;
- * Return: null
+ * print_diagonal - print \ diagonally to stdo
+ * @n: param
+ * return null
  */
 void print_diagonal(int n)
 {
-	int i;
+	int i, j;
 
-	for (i = 1; i <= n; i++)
+	if (n <= 0)
+		 _putchar('\n');
+	else
 	{
-		if (n <= 0)
-		break;
-		else
+		for (i = 1; i <= n; i++)
 		{
-			_putchar('\\');
-			_putchar('\n');
+		_putchar('\\');
+		 _putchar('\n');
+		for (j = 1; j <= i; j++)
+			 _putchar(' ');
 		}
 	}
-	_putchar('\n');
 }
