@@ -10,11 +10,11 @@ int print_last_digit(int n)
 {
 	int l = abs(n);
 	int k = (l % 10);
-	int z = 88;
+	/*int z = 88;*/
 
 	_putchar(k + '0');
-	if (n == INT_MIN)
-		return (z);
-	else
+	/*if (n == INT_MIN)*/
+		/*return (z);*/
+	/*else*/
 		return (k);
 }
