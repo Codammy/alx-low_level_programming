@@ -9,12 +9,12 @@
 void rev_string(char *s)
 {
 int num = strlen(s);
-char NewArray[];
 int j;
-for (j = num - 1; j >= 0; j--)
+char* t = s;
+
+for (j = num; j >= 0; j--)
 {
-NewArray[num] = s[j];
+t = &(s[j]);
 }
-s = &NewArray;
-_putchar('\n');
+*s = *t;
 }
