@@ -21,7 +21,7 @@ _putchar(str[i]);
 }
 else
 {
-for (i = n; i <= length; i++)
+for (i = n; i < length; i++)
 {
 _putchar(str[i]);
 }
