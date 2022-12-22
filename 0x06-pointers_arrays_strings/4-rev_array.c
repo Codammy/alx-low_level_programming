@@ -6,8 +6,8 @@
  */
 void reverse_array(int *a, int n)
 {
-	/**
-	 *n -= 1;*/
+	/*n -= 1;*/
+
 	/*while (n >= 0)*/
 	/*{*/
 	/*	printf("%d", a[n]);*/
