@@ -3,7 +3,7 @@
 /**
  * puts_half - prints characters to stdo (starting from half of the character).
  * @str: string param.
- * Return: null.
+ * Return: null
  */
 void puts_half(char *str)
 {
