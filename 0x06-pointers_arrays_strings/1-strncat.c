@@ -1,7 +1,8 @@
 #include <string.h>
 
 /**
- * _strcat  - concatinates n character pointer to another.
+ * _strncat  - concatinates n character pointer to another.
+ * @n: number of character.
  * @dest: f pointer
  * @src: s pointer
  * Return: dest
