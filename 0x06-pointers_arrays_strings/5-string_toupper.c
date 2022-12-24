@@ -4,10 +4,8 @@
 /**
  * string_toupper - works exactly like strupr function
  * Return: string_toupper
- * @conv
+ * @conv: pointer
  */
-
-void test();
 char *string_toupper(char *conv)
 {
 int i;
