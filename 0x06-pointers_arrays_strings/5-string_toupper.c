@@ -2,24 +2,25 @@
 #include <string.h>
 
 /**
- * string_toupper - works exactly like strupr function
+ * string_toupper - this uses our strupr to transform sring to uppercase
  * Return: string_toupper
  * @conv: pointer
  */
 char *string_toupper(char *conv)
 {
+int slength = strlen(conv);
 int i;
-int length = strlen(conv);
 
-for (i = 0; i < length; i++)
+for (i = 0; i < slength; i++)
 {
 if (conv[i] >= 97)
 {
-_putchar(conv[i] - 32);
+conv[i] = conv[i] - 32;
 }
 else
-_putchar(conv[i]);
+{
+conv[i] = conv[i];
 }
-_putchar('\n');
-return (0);
+}
+return (conv);
 }
