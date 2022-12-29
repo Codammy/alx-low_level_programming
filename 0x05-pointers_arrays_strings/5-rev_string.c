@@ -10,7 +10,7 @@ void rev_string(char *s)
 {
 	/* s = stores the address of the array */
 	int l = strlen(s);
-	char a[l];
+	char a[450];
 	int i = 0;
 	int j;
 	int x;
