@@ -8,13 +8,20 @@
  */
 void rev_string(char *s)
 {
-int num = strlen(s);
-int j;
-char* t = s;
+	/* s = stores the address of the array */
+	int l = strlen(s);
+	char a[l];
+	int i = 0;
+	int j;
+	int x;
 
-for (j = num; j >= 0; j--)
-{
-t = &(s[j]);
-}
-*s = *t;
+	for (j = l - 1; j >= 0; j--)
+	{
+		a[i] = s[j];
+		i++;
+	}
+	for (x = 0; x < l; x++)
+	{
+		s[x] = a[x];
+	}
 }
