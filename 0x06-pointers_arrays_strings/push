@@ -1,5 +1,5 @@
 rm {*~,.*}
 git restore .gitignore
 git add .
-git commit -m 'more pointers and array'
+git commit -m 'more pointers and array in c'
 git push
