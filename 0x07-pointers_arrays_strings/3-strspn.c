@@ -5,7 +5,7 @@
  * _strspn - gets the length of a prefix substring.
  *
  * @s: pointer.
- * @c: pointer.
+ * @accept: pointer.
  *
  * Return: (n);
  */
