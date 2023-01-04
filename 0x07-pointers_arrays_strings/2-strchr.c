@@ -7,7 +7,7 @@
  * @s: memory to check from.
  * @c: value to check for.
  *
- * Return: (c);
+ * Return: (ret);
  */
 char *_strchr(char *s, char c)
 {
