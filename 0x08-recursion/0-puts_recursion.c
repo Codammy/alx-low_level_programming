@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/** _puts_recursion - prints a string follwed by a new line.
+/**
+ * _puts_recursion - prints a string follwed by a new line.
  *
  * @s: constant string
  *
