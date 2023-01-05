@@ -19,7 +19,7 @@ if (capt[0] >= 97)
 {
 capt[i] = capt[i] - 32;
 }
-if ((capt[i] == ' ') /*|| (s[i] == ' ' && s[i] == '.') || (s[i] == ' ' && s[i] == '\n') || (s[i] == ' ' && s[i] == '\t') || (s[i] == '.' && s[i] == '\n')*/ || (capt[i] == '\n') || (capt[i] == '\t') || (capt[i] == ',') || (capt[i] == ';') || (capt[i] == '.') || (capt[i] == '!') || (capt[i] == '?') || (capt[i] == '"') || (capt[i] == '(') || (capt[i] == ')') || (capt[i] == '{') || (capt[i] == '}'))
+if ((capt[i] == ' ') || (capt[i] == '\n') || (capt[i] == '\t') || (capt[i] == ',') || (capt[i] == ';') || (capt[i] == '.') || (capt[i] == '!') || (capt[i] == '?') || (capt[i] == '"') || (capt[i] == '(') || (capt[i] == ')') || (capt[i] == '{') || (capt[i] == '}'))
 {
 i++;
 if (capt[i] >= 97)
