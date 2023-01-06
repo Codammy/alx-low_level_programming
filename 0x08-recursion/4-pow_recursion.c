@@ -1,14 +1,17 @@
 #include <math.h>
 
 /**
- * _sqrt_recursion - retuens the square root of a number;
+ * _pow_recursion - returns the power of a number;
  *
- * @n: argument/parameter.
- * Return: sqroot.
+ * @x: base argument.
+ * @y: power argument.
+ * Return: power.
  */
-int _sqrt_recursion(int n)
+int _sqrt_recursion(int x, int y)
 {
-	int sqroot = sqrt(n);
+if (y < 0)
+return (-1);
+	int power = pow(x, y)
 
-	return (sqroot);
+	return (power);
 }
