@@ -3,7 +3,9 @@
 /**
  * main - passes program name as argument at runtime.
  *
- * Return 0.
+ * @argc: number of argument passed.
+ * @argv: This is anarray of pointers, stores arguments passed.
+ * Return: 0.
  */
 int main(int __attribute__((unused)) argc, char *argv[])
 {
