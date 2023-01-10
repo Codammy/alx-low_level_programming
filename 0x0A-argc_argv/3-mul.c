@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-
 /**
  * main - multiplies 2 numers.
  *
@@ -11,28 +9,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int res = 0;
 	int i;
 	int j;
+	int res;
 
-	if (argc < 2)
-	{
-		putchar(0 + '0');
-		putchar('\n');
-	} else
-	{
-	for (i = 1; i <= argc; i++)
-	{
-	j = atoi(argv[i]);	
-	if (!(isdigit(j)))
+	if (argc != 3)
 	{
 		puts("Error");
 		return (1);
 	}
-	res += j;
-}
-	printf("%d", res);
-	putchar('\n');
-	}
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
+	res = i * j;;
+
+	printf("%d\n", res);
 	return (0);
 }
