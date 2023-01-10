@@ -18,36 +18,38 @@ int main(int argc, char *argv[])
 	int k;
 	int l;
 
-	if (argc < 2)
+	if (argc < 2) /* checks if arguments is passed after program name */
 	{
 		putchar(0 + '0');
 		putchar('\n');
-	} else
+	} else /* if arguments is passed */
 	{
-	for (i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++) /* iterates the argument */
 	{
 	char *S = argv[i];
 	int len = strlen(S) - 1;
-	for (k = 0; k < len; k++)
+
+	for (k = 0; k < len; k++) /* iterates the argument string value */
 	{
 	char *p = S;
-	S ++;
-	j = atoi(p);
-	if (j == 0)
+
+	S++;
+	j = atoi(p); /* converts argument string value to a number */
+	if (j == 0) /* checks if string value is not a number */
+	{
+		puts("Error");
+		return (1); /* prints error and return 1. */
+	}
+	}
+	l = atoi(argv[i]); /* converts arguments to number */
+	if (l == 0) /* checks if argument is not a number */
 	{
 		puts("Error");
 		return (1);
 	}
-	}
-	l = atoi(argv[i]);
-	if (l == 0)
-	{
-		puts("Error");
-		return (1);
-	}
-	res += l;
+	res += l; /* sums up number */
 }
-	printf("%d\n", res);
+	printf("%d\n", res); /* prints sumed result */
 	}
-	return (0);
+	return (0);	/* End of Program */
 }
