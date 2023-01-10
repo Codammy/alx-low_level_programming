@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
- * main - multiplies 2 numers.
+ * main - sum up the value of arguments passed if its an integer
+ * and greater than 1.
  *
  * @argc: number of argument passed.
  * @argv: This is anarray of pointers, stores arguments passed.
@@ -21,18 +21,17 @@ int main(int argc, char *argv[])
 		putchar('\n');
 	} else
 	{
-	for (i = 1; i <= argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-	j = atoi(argv[i]);	
-	if (!(isdigit(j)))
+	j = atoi(argv[i]);
+	if (j == 0)
 	{
 		puts("Error");
 		return (1);
 	}
 	res += j;
 }
-	printf("%d", res);
-	putchar('\n');
+	printf("%d\n", res);
 	}
 	return (0);
 }
