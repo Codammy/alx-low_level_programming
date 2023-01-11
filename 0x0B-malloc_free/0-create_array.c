@@ -9,14 +9,18 @@
  */
 char *create_array(unsigned int size, char c)
 {
+	size_t len;
 	char *ptr;
 
-/*	if (size == 0) */
-/*		return (NULL);*/
-	ptr = calloc(size, sizeof(char) * size);
-	ptr[0] = c;
+	if (size == 0)
+		return (NULL);
 
-/*	if (ptr == NULL)
-		return (NULL); */
+	ptr = calloc(size, sizeof(char) * size);
+
+	for (len = 0; len < size; len++)
+	ptr[len] = c;
+
+	if (ptr == NULL)
+		return (NULL);
 	return (ptr);
 }
