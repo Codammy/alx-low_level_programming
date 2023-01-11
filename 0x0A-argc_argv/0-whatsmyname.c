@@ -7,9 +7,9 @@
  * @argv: This is anarray of pointers, stores arguments passed.
  * Return: 0.
  */
-int main(int argc, char __attribute__((unused)) *argv[])
+int main(int __attribute__((unused)) argc, char *argv[])
 {
-	printf("%d\n", argc);
+	printf("%s\n", argv[0]);
 
 	return (0);
 }
