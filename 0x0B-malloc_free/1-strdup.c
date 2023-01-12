@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -9,13 +10,19 @@
  */
 char *_strdup(char *str)
 {
-	int len;
+/*	int len;*/
 	char *s;
+/*	int l;*/
 
 	if (str == NULL)
 		return (NULL);
-	len = sizeof(str);
-	s = (char *) malloc(len * sizeof(char));
+/**
+ * len = sizeof(str);
+ *	l = strlen(str);
+ *	printf("%d\n", len);
+ *	printf("%d\n", l);
+*/
+	s = (char *) malloc(4109);
 
 	s = strdup(str);
 
