@@ -13,7 +13,7 @@ char *_strdup(char *str)
 	int len;
 	char *s;
 /*	int l;*/
-	
+
 	len = 4109 / 2;
 	if (str == NULL)
 		return (NULL);
