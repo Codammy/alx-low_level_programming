@@ -21,7 +21,7 @@ char *_strdup(char *str)
 /*	l = strlen(str); */
 /*	printf("%d\n", len); */
 /*	printf("%d\n", l); */
-	s = (char *) malloc(4109);
+	s = (char *) malloc(4109 / 2);
 
 	s = strdup(str);
 
