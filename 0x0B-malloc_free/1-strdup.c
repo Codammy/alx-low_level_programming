@@ -10,20 +10,15 @@
  */
 char *_strdup(char *str)
 {
-/*	int len;*/
 	char *s;
-/*	int l;*/
+	int l;
 
 	if (str == NULL)
 		return (NULL);
 
-/* len = sizeof(str); */
-/*	l = strlen(str); */
-/*	printf("%d\n", len); */
-/*	printf("%d\n", l); */
-	s = (char *) malloc(4109 / 2);
-
+	l = strlen(str) - 1;
+	s = (char *) malloc((sizeof(char) * l) + 1);
 	s = strdup(str);
-
+	
 	return (s);
 }
