@@ -10,11 +10,10 @@
  */
 char *_strdup(char *str)
 {
-	int len;
+/*	int len;*/
 	char *s;
 /*	int l;*/
 
-	len = 4109 / 2;
 	if (str == NULL)
 		return (NULL);
 
@@ -22,7 +21,7 @@ char *_strdup(char *str)
 /*	l = strlen(str); */
 /*	printf("%d\n", len); */
 /*	printf("%d\n", l); */
-	s = (char *) malloc(len);
+	s = (char *) malloc(4109);
 
 	s = strdup(str);
 
