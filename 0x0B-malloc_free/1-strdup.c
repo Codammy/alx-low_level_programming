@@ -22,7 +22,7 @@ char *_strdup(char *str)
 /*	l = strlen(str); */
 /*	printf("%d\n", len); */
 /*	printf("%d\n", l); */
-	s = (char *) malloc(len * sizeof(char));
+	s = (char *) malloc(len);
 
 	s = strdup(str);
 
