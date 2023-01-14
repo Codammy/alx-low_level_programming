@@ -18,6 +18,6 @@ int main(void)
         return (1);
     }
     printf("%s\n", s);
-    free(s);
+/*    free(s);*/
     return (0);
 }
