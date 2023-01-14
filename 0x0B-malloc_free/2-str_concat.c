@@ -20,7 +20,11 @@ char *str_concat(char *s1, char *s2)
 	len2 = strlen(s2);
 	lenlen = len1 + len2;
 	if (len1 == 0)
+	{
 		len1++;
+		if (len2 == 0)
+		len1--;
+	}
 	if (len2 == 0)
 		lenlen++;
 	j = 0;
