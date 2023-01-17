@@ -8,13 +8,12 @@ void print_dog(struct dog *d)
 {
 	if (d == 0)
 		return;
-/*	(*d).name = "bingo";*/
-		if (d->name == 0)
-			printf("(nil)");
-/*	(*d).age = 2;*/
-		if (d->age == 0)
-			printf("(nil)");
-/*	(*d).owner = "Mr Dam";*/
-		if (d->owner == 0)
-			printf("(nil)");
+	if (d->name == 0)
+		printf("(nil)");
+
+	if (d->age == 0)
+		printf("(nil)");
+
+	if (d->owner == 0)
+		printf("(nil)");
 }
