@@ -1,4 +1,4 @@
-
+#include "dog.h"
 /**
  * init_dog - initializes a variable of type struct dog
  * @d: struct variable or object
@@ -8,9 +8,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	(*d).name = "bingo";
-	(*d).age = 2;
-	(*d).owner = "Dammy";
-
-	return (d);
+	(*d).name = name;
+	(*d).age = age;
+	(*d).owner = owner;
 }
