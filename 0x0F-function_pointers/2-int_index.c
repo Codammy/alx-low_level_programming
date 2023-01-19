@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * int_index - A function that searches for an integer.
  *
@@ -12,7 +13,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 int count = 0;
 int index, not_zero;
 
-if (array != 0 && cmp != 0)
+if (array != NULL && cmp != NULL)
 {
 if (size <= 0)
 	return (-1);
@@ -26,7 +27,8 @@ while (count < size)
 }
 if (not_zero == 0)
 	return (-1);
-return (count);
 }
+else
+	return (-1);
 return (count);
 }
