@@ -12,6 +12,8 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
+	if (array != NULL || action != NULL)
+	{
 	unsigned int count = 0;
 	int index;
 
@@ -20,5 +22,6 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 		index = array[count];
 		action(index);
 		count++;
+	}
 	}
 }
