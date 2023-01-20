@@ -1,4 +1,4 @@
-rm {*~,*.*swp}
+rm {*~,*.swp}
 git restore .gitignore
 git add .
 git commit -m 'Variadic functions'
