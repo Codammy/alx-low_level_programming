@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * print_string - A function that prints strings, followed by a new line.
+ * print_strings - A function that prints strings, followed by a new line.
  * @separator: string to be printed between numbers.
  * @n: size of arg.
  *
@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		string = va_arg(ptr, char*);
-		
+
 		string != NULL ? printf("%s", string) : printf("(nil)");
 
 		if (separator != NULL)
