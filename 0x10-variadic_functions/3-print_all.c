@@ -39,7 +39,11 @@ void print_all(const char *const format, ...)
 				break;
 			case 's':
 				s = va_arg(p, char *);
-				if (s == NULL){printf("(nil)"); break;}
+				if (s == NULL)
+				{
+					printf("(nil)");
+				       	break;
+				}
 				printf("%s", s);
 				break;
 			case 'c':
