@@ -19,8 +19,6 @@ void print_all(const char *const format, ...)
 	va_start(p, format);
 while (i < len)
 {
-if (format[i] == 's' || format[i] == 'c' || format[i] == 'i' || format[i] == 'f')
-	{
 		while (i > 0)
 		{
 			printf(", ");
@@ -47,7 +45,6 @@ if (format[i] == 's' || format[i] == 'c' || format[i] == 'i' || format[i] == 'f'
 				printf("%c", va_arg(p, int));
 				break;
 		}
-	}
 	i++;
 }
 	putchar('\n');
