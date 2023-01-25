@@ -16,7 +16,7 @@ void print_all(const char *const format, ...)
 
 	if (format == NULL)
 	{
-		printf("(nil)");
+		printf("(nil)\n");
 		return;
 	}
 	i = 0;
@@ -39,13 +39,9 @@ void print_all(const char *const format, ...)
 				break;
 			case 's':
 				s = va_arg(p, char *);
-				if (s == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
-					printf("%s", s);
-					break;
+				if (s == NULL){printf("(nil)"); break;}
+				printf("%s", s);
+				break;
 			case 'c':
 				printf("%c", va_arg(p, int));
 				break;
