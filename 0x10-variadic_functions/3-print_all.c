@@ -10,14 +10,16 @@
  */
 void print_all(const char *const format, ...)
 {
-	int i = 0;
-	int len = strlen(format);
+	int i, len;
 	va_list p;
+       	
+	if (format == NULL)
+		return;
+	i = 0;
+	len = strlen(format);
 
 	va_start(p, format);
 
-	if (format == NULL)
-		return;
 	while (i < len)
 	{
 		if (i > 0)
