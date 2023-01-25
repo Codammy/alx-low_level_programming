@@ -14,8 +14,8 @@ void print_all(const char *const format, ...)
 	va_list p;
 	char *s;
 
-	if (format == NULL)
-		return;
+	if (format != NULL)
+	{
 	i = 0;
 	len = strlen(format);
 	va_start(p, format);
@@ -50,4 +50,5 @@ void print_all(const char *const format, ...)
 		i++;
 	}
 	putchar('\n');
+}
 }
