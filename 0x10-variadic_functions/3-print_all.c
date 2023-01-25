@@ -29,7 +29,15 @@ void print_all(const char *const format, ...)
 				printf("%f", va_arg(p, double));
 				break;
 			case 's':
-				printf("%s", va_arg(p, char *));
+				switch (format[i])
+				{
+				case 0:
+					printf("(nil)");
+					break;
+				default:
+					printf("%s", va_arg(p, char *));
+					break;
+				}
 				break;
 			case 'c':
 				printf("%c", va_arg(p, int));
