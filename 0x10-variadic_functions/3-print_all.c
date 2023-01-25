@@ -12,18 +12,20 @@ void print_all(const char *const format, ...)
 {
 	int i, len;
 	va_list p;
-       	
+	char *s;
+
 	if (format == NULL)
 		return;
 	i = 0;
 	len = strlen(format);
-
 	va_start(p, format);
-
 	while (i < len)
 	{
-		if (i > 0)
+		while (i > 0)
+		{
 			printf(", ");
+			break;
+		}
 		switch (format[i])
 		{
 			case 'i':
@@ -33,20 +35,16 @@ void print_all(const char *const format, ...)
 				printf("%f", va_arg(p, double));
 				break;
 			case 's':
-				switch (format[i])
+				s = va_arg(p, char *);
+				if (s == NULL)
 				{
-				case 0:
 					printf("(nil)");
 					break;
-				default:
-					printf("%s", va_arg(p, char *));
-					break;
 				}
-				break;
+					printf("%s", s);
+					break;
 			case 'c':
 				printf("%c", va_arg(p, int));
-				break;
-			default:
 				break;
 		}
 		i++;
