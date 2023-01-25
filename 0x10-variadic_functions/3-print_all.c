@@ -14,12 +14,12 @@ void print_all(const char *const format, ...)
 	va_list p;
 	char *s;
 
-	if (format != NULL)
-	{
 	i = 0;
 	len = strlen(format);
 	va_start(p, format);
-	while (i < len)
+while (i < len)
+{
+if (format[i] == 's' || format[i] == 'c' || format[i] == 'i' || format[i] == 'f')
 	{
 		while (i > 0)
 		{
@@ -47,8 +47,8 @@ void print_all(const char *const format, ...)
 				printf("%c", va_arg(p, int));
 				break;
 		}
-		i++;
 	}
-	putchar('\n');
+	i++;
 }
+	putchar('\n');
 }
