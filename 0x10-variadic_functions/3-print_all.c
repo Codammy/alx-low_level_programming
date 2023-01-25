@@ -42,6 +42,8 @@ void print_all(const char *const format, ...)
 			case 'c':
 				printf("%c", va_arg(p, int));
 				break;
+			default:
+				break;
 		}
 		i++;
 	}
