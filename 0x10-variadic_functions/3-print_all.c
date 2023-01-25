@@ -13,9 +13,10 @@ void print_all(const char *const format, ...)
 	int i = 0;
 	int len = strlen(format);
 	va_list p;
-
+	if (format == 0)
+		return;
 	va_start(p, format);
-
+	
 	while (i < len)
 	{
 		if (i > 0)
