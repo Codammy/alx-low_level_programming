@@ -15,10 +15,7 @@ void print_all(const char *const format, ...)
 	char *s;
 
 	if (format == NULL)
-	{
-		printf("(nil)\n");
 		return;
-	}
 	i = 0;
 	len = strlen(format);
 	va_start(p, format);
