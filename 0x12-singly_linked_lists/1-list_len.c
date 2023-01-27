@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stddef.h>
 
 /**
  * list_len - function that returns the number of nodes
