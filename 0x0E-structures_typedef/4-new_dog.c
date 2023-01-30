@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "dog.h"
 /**
  * new_dog - creates new dog
@@ -14,9 +15,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (newDog == 0)
 		return (0);
-	(*newDog).name = name;
+	(*newDog).name = strdup(name);
 	(*newDog).age = age;
-	(*newDog).owner = owner;
+	(*newDog).owner = strdup(owner);
 
 	return (newDog);
 }
