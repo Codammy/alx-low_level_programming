@@ -1,1 +1,1 @@
-#Structure\nlinked list in c
+#Data Structure\nlinked list in c
