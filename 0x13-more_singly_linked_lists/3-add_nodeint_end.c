@@ -4,10 +4,13 @@
  * add_nodeint_end - Adds a new node at the end of a listint_t list.
  * @head: head
  * @n: node val.
+ *
+ * Return: end_node.
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *end_node, *new_node;
+
 	end_node = malloc(sizeof(listint_t));
 	new_node = *head;
 
