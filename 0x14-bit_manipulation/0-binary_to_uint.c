@@ -8,13 +8,13 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	size_t lenBit = strlen(b);
-	size_t retVal = 0;
-	size_t by2 = 1;
-	int i = lenBit - 1;
+	size_t lenBit, retVal = 0, by2 = 1;
+	int i;
 
 	if (b == NULL)
 		return (0);
+	lenBit = strlen(b);
+	i = lenBit - 1;
 	while (i >= 0)
 	{
 		if (b[i] == 0)
