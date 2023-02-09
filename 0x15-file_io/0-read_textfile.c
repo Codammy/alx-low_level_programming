@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		exit(0);
 	lenrd = read(fd, lyrics, letters);
 
-	printf("%s\n", lyrics);
+	dprintf(fd, "%s", lyrics);
 	close(fd);
 	return (lenrd);
 }
