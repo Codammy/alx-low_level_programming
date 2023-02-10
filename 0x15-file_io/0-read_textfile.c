@@ -1,6 +1,4 @@
 #include "main.h"
-#include <sys/types.h>
-#include <sys/stat.h>
 
 /**
  * read_textfile -  reads a text file and prints it to the POSIX I/O.i
@@ -23,9 +21,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	lyrics = (char *)malloc(letters * sizeof(char));
 	if (lyrics == NULL)
 		exit(0);
-	lenrd = read(fd, lyrics, letters);
-	lyrics[lenrd + 1] = '\0';
-	write(STDOUT_FILENO, lyrics, letters);
+	read(fd, lyrics, letters);
+	lenrd = write(STDOUT_FILENO, lyrics, letters);
+		if (!lenrd)
+			return (0);
 	close(fd);
 	return (lenrd);
 }
