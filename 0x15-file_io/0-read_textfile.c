@@ -10,7 +10,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	unsigned int lenrd;
+	unsigned int lenrd, len;
 	char *lyrics;
 
 	if (filename == NULL)
@@ -22,8 +22,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (lyrics == NULL)
 		exit(0);
 	lenrd = read(fd, lyrics, letters);
-	write(STDOUT_FILENO, lyrics, letters);
-		if (!lenrd)
+	len = write(STDOUT_FILENO, lyrics, letters);
+		if (!len)
 			return (0);
 	close(fd);
 	return (lenrd);
