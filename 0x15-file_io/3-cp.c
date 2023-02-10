@@ -5,8 +5,9 @@
  *
  * @argc: indicates no. of argument (MAX 3)
  * @argv: arrays of pointers to argument. incluing program name.
+ * Return: 0.
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int fd, rdstatus, clstatus, wrstatus;
 	char *buff;
