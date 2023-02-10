@@ -21,8 +21,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	lyrics = (char *)malloc(letters * sizeof(char));
 	if (lyrics == NULL)
 		exit(0);
-	read(fd, lyrics, letters);
-	lenrd = write(STDOUT_FILENO, lyrics, letters);
+	lenrd = read(fd, lyrics, letters);
+	write(STDOUT_FILENO, lyrics, letters);
 		if (!lenrd)
 			return (0);
 	close(fd);
