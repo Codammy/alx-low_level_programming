@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (lyrics == NULL)
 		exit(0);
 	lenrd = read(fd, lyrics, letters);
-	len = write(STDOUT_FILENO, lyrics, letters);
+	len = dprintf(STDOUT_FILENO, lyrics, letters);
 		if (!len)
 			return (0);
 	close(fd);
