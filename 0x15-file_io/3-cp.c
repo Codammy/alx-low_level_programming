@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	fd = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0664);
-	wstats = dprintf(fd, "%s", buff);
+	wstats = write(fd, buff, 1024);
 	if (wstats < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
