@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-        buff = (char *) malloc(1024 * sizeof(char));
-        read(fd, buff, 1024);
+	buff = (char *) malloc(1024 * sizeof(char));
+	read(fd, buff, 1024);
 	if (close(fd) < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
