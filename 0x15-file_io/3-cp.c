@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	rdstatus = read(fd, buff, 1024);
 	if (rdstatus < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	clstatus = close(fd);
