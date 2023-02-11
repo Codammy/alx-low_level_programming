@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		puts("Usage: cp file_from file_to");
+		perror("Usage: cp file_from file_to");
 		exit(97);
 	}
 	fd = open(argv[1], O_RDONLY);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		perror("Error: Can't close fd FD_VALUE");
 		exit(100);
 	}
-	fd = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0644);
+	fd = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0664);
 	wrstatus = dprintf(fd, "%s", buff);
 	if (wrstatus < 0)
 	{
