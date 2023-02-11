@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fd = open(argv[1], O_RDONLY);
+	if (fd < 0)
+		return (-1);
 	buff = (char *) malloc(1024 * sizeof(char));
 	rstats = read(fd, buff, 1024);
 	if (rstats < 0)
@@ -31,6 +33,8 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	fd = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 0664);
+	if (fd < 0)
+		return (-1);
 	wstats = write(fd, buff, 1024);
 	if (wstats < 0)
 	{
