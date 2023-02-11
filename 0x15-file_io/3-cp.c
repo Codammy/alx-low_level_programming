@@ -18,8 +18,10 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fd = open(argv[1], O_RDONLY);
-	buff = (char *) malloc(1024 * sizeof(char));
-	rstats = read(fd, buff, 1024);
+	do {
+		buff = (char *) malloc(1024 * sizeof(char));
+		rstats = read(fd, buff, 1024);
+	} while (rstats > 0);
 	if (rstats < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
