@@ -9,7 +9,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int binary[33];
+	int binary[1000];
 	size_t x = n, i = 0;
 
 	if (index > 32)
