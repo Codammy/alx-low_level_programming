@@ -9,9 +9,11 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int binary[10000];
+	int binary[32];
 	size_t x = n, i = 0;
 
+	if (index > 32)
+		return (-1);
 	if (n == 0)
 		return (0);
 	while (x > 0)
@@ -23,7 +25,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		x >>= 1;
 		i++;
 	}
-	/*while (len > 0)*/
 
 	return (binary[index]);
 }
