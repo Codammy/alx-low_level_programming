@@ -28,7 +28,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	strcpy(appendS, s1);
 
 	newS = strncat(appendS, s2, n);
-	if (newS == NULL)
-		return (NULL);
+/*	if (newS == NULL)
+ *		return (NULL);
+ */
 	return (newS);
 }
