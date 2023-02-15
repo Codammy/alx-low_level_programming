@@ -9,11 +9,20 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *newS;
+	char *newS, *appendS;
+	int len, lenn;
+
 	if ((s1 == NULL) && (s2 == NULL))
 		return(NULL);
-	
-	newS = strncat(s1, s2, n);
+
+	len = strlen(s1);
+	lenn = strlen(s2);
+	appendS = malloc((len + lenn + 1) * sizeof(char));
+	if (appendS == NULL)
+		return (NULL);
+
+	strcpy(appendS, s1);
+	newS = strncat(appendS, s2, n);
 	if (newS == NULL)
 		return(NULL);
 
