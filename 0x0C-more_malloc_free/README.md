@@ -1,4 +1,4 @@
-#More malloc
+#More malloc in c.
 This project comprises of problems in
 Malloc
 Calloc
