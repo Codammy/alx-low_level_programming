@@ -1,0 +1,22 @@
+#include  "main.h"
+
+/**
+ * string_nconcat - concats two strings
+ *
+ * @s1: first string.
+ * @s2: second string.
+ * Return: 0*
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *newS;
+
+	if ((s1 == NULL) && (s2 == NULL))
+		return(NULL);
+
+	newS = strncat(s1, s2, n);
+	if (newS == NULL)
+		return(NULL);
+
+	return(newS);
+}
