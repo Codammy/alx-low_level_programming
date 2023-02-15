@@ -1,0 +1,5 @@
+rm {*~,.*}
+git restore .gitignore
+git add .
+git commit -m 'malloc calloc realloc'
+git push
