@@ -5,7 +5,8 @@
  *
  * @s1: first string.
  * @s2: second string.
- * Return: 0*
+ * @n: len to copy
+ * Return: 0.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -13,7 +14,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int len, lenn;
 
 	if ((s1 == NULL) && (s2 == NULL))
-		return(NULL);
+		return (NULL);
 
 	len = strlen(s1);
 	lenn = strlen(s2);
@@ -22,9 +23,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	strcpy(appendS, s1);
+	free(s1);
+
 	newS = strncat(appendS, s2, n);
 	if (newS == NULL)
-		return(NULL);
+		return (NULL);
 
-	return(newS);
+	return (newS);
 }
