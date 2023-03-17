@@ -2,11 +2,23 @@
 #include "lists.h"
 
 /**
- * func_name - desc.
- * 
- * @arg1:
- * @arg2:
- * Return: .
+ * sum_dlistint -  returns the sum of all the data of a dlistint_t linked list.
+ *
+ * @head: pointer to head
+ * Return: sum of data of dlistint of a linked list..
 */
 
-return_type func_name(dt_type arg1, dt_
+int sum_dlistint(dlistint_t *head)
+{
+	int sum;
+
+	if (head == NULL)
+		return (0);
+	sum = 0;
+	while (head != NULL)
+	{
+		sum += (*head).n;
+		head = (*head).next;
+	}
+	return (sum);
+}

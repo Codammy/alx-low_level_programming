@@ -1,12 +1,21 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * func_name - desc.
- * 
- * @arg1:
- * @arg2:
- * Return: .
+ * free_dlistint - Frees a dlistint_t list..
+ *
+ * @head: first node
+ * Return: void.
 */
 
-return_type func_name(dt_type arg1, dt_
+void free_dlistint(dlistint_t *head)
+{
+	dlistint_t *tmp = head;
+
+	while (tmp != NULL)
+	{
+		tmp = head->next;
+		free(head);
+		head = tmp;
+	}
+}

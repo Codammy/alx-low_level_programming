@@ -2,11 +2,27 @@
 #include "lists.h"
 
 /**
- * func_name - desc.
- * 
- * @arg1:
- * @arg2:
- * Return: .
+ * get_dnodeint_at_index - returns the nth node of dlinked linked list;
+ *
+ * @head: first node;
+ * @index: nth node to return
+ *
+ * Return: nth index starting from zero else NULL.
 */
 
-return_type func_name(dt_type arg1, dt_
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+{
+	size_t n = 0;
+
+	if (head == NULL)
+		return (NULL);
+	while (head != NULL)
+	{
+		if (n == index)
+			return (head);
+		head = (*head).next;
+		n++;
+	}
+
+	return (NULL);
+}
