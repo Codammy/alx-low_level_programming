@@ -2,11 +2,20 @@
 #include "lists.h"
 
 /**
- * func_name - desc.
- * 
- * @arg1:
- * @arg2:
- * Return: .
+ * dlistint_len - prints all the elements of a dlistint_t list.
+ *
+ * @h: first node
+ * Return: number oof nodes
 */
 
-return_type func_name(dt_type arg1, dt_
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t nodeln = 0;
+
+	while (h != NULL)
+	{
+		nodeln++;
+		h = (*h).next;
+	}
+	return (nodeln);
+}
