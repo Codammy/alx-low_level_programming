@@ -1,12 +1,36 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
 
 /**
- * func_name - desc.
+ * add_dnodeint_end - Adds a new node at the end of a dlistint_t list.
  * 
- * @arg1:
- * @arg2:
- * Return: .
+ * @head: pointer to head.
+ * @n: element to add
+ * Return: address of the new element, or NULL if it failed
 */
 
-return_type func_name(dt_type arg1, dt_
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
+{
+	dlistint_t *tmp, *new_nd;
+       
+	new_nd = malloc(sizeof(dlistint_t));
+	if  (new_nd == NULL)
+		return NULL;
+	tmp = *head;
+
+	if ((*head) == NULL)
+		*head = new_nd;
+	else
+	{
+	while (tmp->next != NULL)
+	{
+		tmp = tmp->next;
+	}
+	new_nd->n = n;
+	new_nd->prev = tmp;
+	new_nd->next = NULL;
+	tmp->next = new_nd;
+	}
+	return (new_nd);
+}
