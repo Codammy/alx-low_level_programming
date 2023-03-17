@@ -1,5 +1,5 @@
-#include "header.h"
 #include <stdio.h>
+#include "lists.h"
 
 /**
  * func_name - desc.
@@ -9,4 +9,4 @@
  * Return: .
 */
 
-return_type func_name(dt_type arg1, dt
+return_type func_name(dt_type arg1, dt_

@@ -1,12 +1,22 @@
-#include "header.h"
 #include <stdio.h>
+#include "lists.h"
 
 /**
- * func_name - desc.
+ * print_dlistint - prints all the elements of a dlistint_t list.
  * 
- * @arg1:
- * @arg2:
- * Return: .
+ * @d: first node
+ * Return: number oof nodes
 */
 
-return_type func_name(dt_type arg1, dt
+size_t print_dlistint(const dlistint_t *h)
+{
+	size_t nodeln = 0;
+
+	while(h != NULL)
+	{
+		printf("%d\n", h->n);
+		nodeln++;
+		h = (*h).next;
+	}
+	return (nodeln);
+}
