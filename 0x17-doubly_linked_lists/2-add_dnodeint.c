@@ -1,12 +1,25 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * func_name - desc.
- * 
- * @arg1:
- * @arg2:
- * Return: .
+ * add_dnodeint - Adds a new node at the beginning of a dlistint_t list.
+ *
+ * @head: pointer to first node
+ * @n: element to add
+ * Return: address of new node else NULL
 */
 
-return_type func_name(dt_type arg1, dt_
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+{
+	dlistint_t *new_nd;
+
+	new_nd = malloc(sizeof(dlistint_t));
+	if (new_nd == NULL)
+		return (NULL);
+	new_nd->n = n;
+	new_nd->prev = NULL;
+	new_nd->next = (*head);
+	*head = new_nd;
+
+	return (*head);
+}
