@@ -1,4 +1,9 @@
 #!/bin/bash
 git add .
+<<<<<<< HEAD
 git commit -m 'C -Doubly linked lists'
 git push
+=======
+git commit -m "$PWD"
+git push
+>>>>>>> ff2d977a2ccf8433ca89f18a5fefcfea76f3803b
