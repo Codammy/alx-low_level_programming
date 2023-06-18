@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "hash_tables.h"
-void handle_collision(hash_node_t *cur, hash_node_t *item, hash_node_t *head);
+void handle_collision(hash_node_t *cur, hash_node_t *item);
 /**
  * hash_table_set - adds an element to the hash table
  *
@@ -34,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	hash = key_index((unsigned char *)key, ht->size);
 	if (ht->array[hash])
-		handle_collision(ht->array[hash], item, head);
+		handle_collision(ht->array[hash], item);
 	else
 		ht->array[hash] = item;
 
@@ -49,7 +49,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * @head: head_node
  * Return: void
  */
-void handle_collision(hash_node_t *cur, hash_node_t *item, hash_node_t *head)
+void handle_collision(hash_node_t *cur, hash_node_t *item)
 {
 has_node_t *head = cur;
 if (strcmp(cur->key, item->key) == 0)
