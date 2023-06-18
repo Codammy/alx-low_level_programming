@@ -46,7 +46,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  *
  * @cur: current node
  * @item: item
- * @head: head_node
  * Return: void
  */
 void handle_collision(hash_node_t *cur, hash_node_t *item)
