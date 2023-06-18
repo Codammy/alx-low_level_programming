@@ -57,7 +57,7 @@ if (strcmp(cur->key, item->key) == 0)
 else
 {
 	/* handle collisions */
-	if (*(head).next == NULL)
+	if ((*head).next == NULL)
 		head = cur;
 	else
 	{
