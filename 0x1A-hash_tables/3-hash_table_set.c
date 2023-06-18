@@ -17,11 +17,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *item, *head;
 	int hash;
 
-	if (!(item = malloc(sizeof(hash_node_t))))
+	if ((item = malloc(sizeof(hash_node_t)) == NULL))
 		return (0);
-	if (!(item->key = malloc(strlen(key) + 1)))
+	if ((item->key = malloc(strlen(key) + 1) == NULL))
 		return (0);
-	if (!(item->value = malloc(strlen(value) + 1)))
+	if ((item->value = malloc(strlen(value) + 1) ==NULL))
 		return (0);
 
 	strcpy(item->key, key);
@@ -39,6 +39,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	return (1);
 }
+/**
+ * handle_collision - handles collision and updates value if needed
+ *
+ * @cur: current node
+ * @item: item
+ * @head: head_node
+ * Return: void
+ */
 void handle_collision(hash_node_t *cur, hash_node_t *item, hash_node_t *head)
 {
 if (strcmp(cur->key, item->key) == 0)
