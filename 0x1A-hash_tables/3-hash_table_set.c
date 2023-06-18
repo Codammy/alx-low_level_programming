@@ -51,9 +51,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  */
 void handle_collision(hash_node_t *cur, hash_node_t *item)
 {
-has_node_t *head = cur;
+hash_node_t *head = cur;
 if (strcmp(cur->key, item->key) == 0)
-	memcpy(item->value, cur->value);
+	strcpy(item->value, cur->value);
 else
 {
 	/* handle collisions */
