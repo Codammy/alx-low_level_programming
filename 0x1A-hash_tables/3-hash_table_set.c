@@ -13,7 +13,7 @@ void handle_collision(hash_node_t *cur, hash_node_t *item, hash_node_t *head);
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *item, *head;
+	hash_node_t *item;
 	int hash;
 
 	if (!ht)
@@ -31,8 +31,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(item->key, key);
 	strcpy(item->value, value);
 	item->next = NULL;
-	if (item->next == NULL)
-		head = item->next;
 
 	hash = key_index((unsigned char *)key, ht->size);
 	if (ht->array[hash])
@@ -53,13 +51,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  */
 void handle_collision(hash_node_t *cur, hash_node_t *item, hash_node_t *head)
 {
+has_node_t *head = cur;
 if (strcmp(cur->key, item->key) == 0)
-	strcpy(item->key, cur->value);
+	memcpy(item->value, cur->value);
 else
 {
 	/* handle collisions */
-	if (head == NULL)
-		head = item;
+	if (*(head).next == NULL)
+		head = cur;
 	else
 	{
 		item->next = head;
