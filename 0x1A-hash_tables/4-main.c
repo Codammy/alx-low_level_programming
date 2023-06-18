@@ -21,7 +21,8 @@ int main(void)
     hash_table_set(ht, "Asterix", "Obelix");
     hash_table_set(ht, "Betty", "Cool");
     hash_table_set(ht, "98", "Battery Street");
-    hash_table_set(ht, "c", "isfun");
+    hash_table_set(ht, "c", "u");
+    hash_table_set(ht, "codam", "your favorite coder");
 
     value = hash_table_get(ht, "python");
     printf("%s:%s\n", "python", value);
@@ -39,5 +40,7 @@ int main(void)
     printf("%s:%s\n", "c", value);
     value = hash_table_get(ht, "javascript");
     printf("%s:%s\n", "javascript", value);
+    value = hash_table_get(ht, "codam");
+    printf("%s:%s\n", "codam", value);
     return (EXIT_SUCCESS);
 }
