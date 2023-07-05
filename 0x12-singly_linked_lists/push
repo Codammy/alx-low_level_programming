@@ -1,5 +1,0 @@
-rm {*~,.*}
-git restore .gitignore
-git add .
-git commit -m 'Linked list'
-git push

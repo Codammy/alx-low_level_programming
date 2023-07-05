@@ -1,5 +1,0 @@
-rm {*~,*.}
-git restore .gitignore
-git add .
-git commit -m 'Variadic functions'
-git push

@@ -1,5 +1,0 @@
-rm {*~,.*}
-git add .
-git commit -m 'structure and typedef'
-git push
-echo '*main_0.c' >>.gitignore
