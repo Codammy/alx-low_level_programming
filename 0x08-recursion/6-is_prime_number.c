@@ -3,7 +3,8 @@
  *
  * @n: argument1
  * @dvs: argument2
- * Return: 1 or 0                                                               */
+ * Return: 1 or 0
+ */
 int isPrime(int n, int dvs)
 {
 	if (dvs == 1 && n != 2)
