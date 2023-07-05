@@ -16,6 +16,7 @@ int is_prime_number(int n)
  * @n: argument1
  * @dvs: argument 2
  * Return 1 or 0
+ */
 int isPrime(int n, int dvs)
 {
 	if (dvs == 1)
