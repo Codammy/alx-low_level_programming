@@ -8,13 +8,13 @@
 int isPrime(int n, int dvs);
 int is_prime_number(int n)
 {
-	return (isPrime(n, n / 2));
+	return (isPrime(n, n - 1));
 }
 /**
  * isPrime - work is_prime_number
  *
  * @n: argument1
- * @dvs: argument 2
+ * @dvs: argument2
  * Return 1 or 0
  */
 int isPrime(int n, int dvs)
