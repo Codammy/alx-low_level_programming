@@ -11,18 +11,23 @@
  */
 int main(int argc, char **argv)
 {
-	int sum = 0, tmp;
+	int sum = 0, tmp, i;
 
 	while (argc != 1)
 	{
+		i = 0;
+		while (i < strlen(argv[argc - 1]))
+		{
+			if (isalpha(*argv[argc - 1] + i))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			i++;
+		}
 		tmp = atoi(argv[argc - 1]);
 		if (tmp)
 			sum += tmp;
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
 		argc--;
 	}
 	printf("%d\n", sum);
