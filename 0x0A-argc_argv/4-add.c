@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 /**
  * main - adds positive numbers together
@@ -14,7 +15,8 @@ int main(int argc, char **argv)
 
 	while (argc != 1)
 	{
-		if ((tmp = atoi(argv[argc - 1])))
+		tmp = atoi(argv[argc - 1]);
+		if (tmp)
 			sum += tmp;
 		else
 		{

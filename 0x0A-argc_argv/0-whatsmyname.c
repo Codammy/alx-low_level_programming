@@ -2,8 +2,8 @@
 /**
  * main - program that prints it name
  *
- * argc: len of arguments passed.
- * argv: array of command line arguments
+ * @argc: len of arguments passed.
+ * @argv: array of command line arguments
  * Return: 0
  */
 int main(int argc, char *argv[])
