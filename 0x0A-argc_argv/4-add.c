@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
 
@@ -11,20 +12,25 @@
  */
 int main(int argc, char **argv)
 {
-	int sum = 0, tmp, i;
+	int sum = 0, tmp = 1;
+	unsigned int i;
 
+	while (tmp < argc)
+	{
+	i = 0;
+	while (i < strlen(argv[tmp]))
+	{
+		if (isalpha(argv[tmp][i]))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		i++;
+	}
+	tmp++;
+	}
 	while (argc != 1)
 	{
-		i = 0;
-		while (i < strlen(argv[argc - 1]))
-		{
-			if (isalpha(*argv[argc - 1] + i))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			i++;
-		}
 		tmp = atoi(argv[argc - 1]);
 		if (tmp)
 			sum += tmp;
