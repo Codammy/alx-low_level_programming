@@ -5,7 +5,7 @@
  *
  * return: 0
  */
-int main()
+int main(void)
 {
-	printf("%d\n", _isalpha('a'));
+	return (0);
 }
