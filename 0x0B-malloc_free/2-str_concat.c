@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 	char *compsent;
 	int len1, len2, len, i, j;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
 	len1 = strlen(s1);
 	len2 = strlen(s2) + 1;
