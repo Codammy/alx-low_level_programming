@@ -4,7 +4,7 @@
  * _strdup -  returns a pointer to a new string which is a dup of another.
  *
  * @str: pointer to string
- * Return new string or NULL
+ * Return: new string or NULL
  */
 char *_strdup(char *str)
 {
