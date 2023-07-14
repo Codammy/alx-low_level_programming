@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * _calloc - allocates mem using malloc
@@ -10,7 +11,12 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr = malloc(nmmemb * size);
+	void *ptr;
+
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
+	return (ptr);
 }
