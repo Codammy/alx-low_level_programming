@@ -21,7 +21,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	len1 = strlen(s1);
 	len = len1 + n;
-	str = calloc(sizeof(char), len);
+	str = calloc(sizeof(int), len);
 	if (!str)
 		return (NULL);
 
