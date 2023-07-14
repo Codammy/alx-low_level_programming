@@ -15,13 +15,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int len1, len, i = 0, j = 0;
 
 	if (s1 == NULL)
-		s1 = "";
+		return (NULL);
 	else if (s2 == NULL)
 		s2 = "";
 
 	len1 = strlen(s1);
 	len = len1 + n;
-	str = calloc(sizeof(int), len);
+	str = calloc(sizeof(char), len);
 	if (!str)
 		return (NULL);
 
