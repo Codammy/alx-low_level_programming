@@ -8,8 +8,6 @@
  */
 void print_dog(struct dog *d)
 {
-	if (!d)
-		printf("(nil)\n");
 	if (d)
 	{
 		if (!(d->name))
