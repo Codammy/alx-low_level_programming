@@ -17,9 +17,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	bingo = malloc(sizeof(dog_t));
 	if (!bingo)
 		return (NULL);
-	if (name == NULL || owner == NULL)
-	bingo->name = strdup(name);
-	bingo->owner = strdup(owner);
+	if (name == NULL)
+		bingo->name = NULL;
+	else
+		bingo->name = strdup(name);
+	if (owner == NULL)
+		bingo->owner = NULL;
+	else
+		bingo->owner = strdup(owner);
 	bingo->age = age;
 
 	return (bingo);
