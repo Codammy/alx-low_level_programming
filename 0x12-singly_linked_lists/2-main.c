@@ -14,7 +14,7 @@ int main(void)
 
     head = NULL;
     add_node(&head, "Alexandro");
-    add_node(&head, (char *)0);
+    add_node(&head, "Betty");
     add_node(&head, "Augustin");
     add_node(&head, "Bennett");
     add_node(&head, "Bilal");
