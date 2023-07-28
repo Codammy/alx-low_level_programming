@@ -3,13 +3,16 @@
 #include "lists.h"
 
 /**
+ * print_list - prints elements in a node
  *
+ * @h: head node
+ * Return: number of nodes
  */
 size_t print_list(const list_t *h)
 {
 	size_t i = 0;
 
-	while(h)
+	while (h)
 	{
 		if (!h->str)
 			printf("[0] (nil)\n");
