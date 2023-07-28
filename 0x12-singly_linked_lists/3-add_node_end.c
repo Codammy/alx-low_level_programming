@@ -11,11 +11,11 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_last;
+	list_t *new_last, *tmp;
 
 	if (!head)
 		return (NULL);
-/*	tmp = *head;*/
+	/* creates new node */
 	new_last = malloc(sizeof(list_t));
 	if (!new_last)
 		return (NULL);
@@ -26,10 +26,17 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	new_last->next = NULL;
 
-/**
- * 	while (tmp->next)
-		tmp = (*tmp).next;
-	tmp->next = new_last;
-	*/
+	/* if list isn empty */
+	if (!(*head))
+		*head = new_last;
+	/* if not iterate to the lasy node and append*/
+	else
+	{
+		tmp = *head;
+		while (tmp->next)
+			tmp = (*tmp).next;
+		tmp->next = new_last;
+	}
+
 	return (new_last);
 }
