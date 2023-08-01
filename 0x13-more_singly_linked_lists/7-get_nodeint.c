@@ -4,7 +4,7 @@
 /**
  * get_nodeint_at_index - returns the node at index.
  *
- * @h: first node
+ * @head: first node
  * @index: index
  * Return: node at index.
  */
