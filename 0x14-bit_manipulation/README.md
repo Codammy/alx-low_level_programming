@@ -1,6 +1,6 @@
 # C - Bit manipulation
 
-![bitwise](bitwise.png)
+![bitwise](https://github.com/Codammy/FreeCodeCamp/blob/main/bitwise.png)
 
 ## Resources
 **Read or watch:**
