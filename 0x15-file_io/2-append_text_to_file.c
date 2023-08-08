@@ -18,10 +18,13 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 	fd = open(filename, O_APPEND | O_WRONLY);
-	if (fd != 3)
+	if (fd < 3)
 		return (-1);
 	if (!text_content)
-		return (-1);
+	{
+		close(fd);
+		return (1);
+	}
 	n = strlen(text_content);
 	buf = malloc(n);
 	if (!buf)
