@@ -1,5 +1,7 @@
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>
 #include <string.h>
 
 int _open(char *file, int action);
