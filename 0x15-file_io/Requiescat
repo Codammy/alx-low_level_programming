@@ -1,27 +1,22 @@
-Requiescat
-by Oscar Wilde
+When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.  The "overall options" allow you to
+stop this process at an intermediate stage.  For example, the -c option says not to run the linker.  Then the output
+consists of object files output by the assembler.
 
-Tread lightly, she is near
-Under the snow,
-Speak gently, she can hear
-The daisies grow.
+Other options are passed on to one stage of processing.  Some options control the preprocessor and others the compiler
+itself.  Yet other options control the assembler and linker; most of these are not documented here, since you rarely need
+to use any of them.
 
-All her bright golden hair
-Tarnished with rust,
-She that was young and fair
-Fallen to dust.
+Most of the command-line options that you can use with GCC are useful for C programs; when an option is only useful with
+another language (usually C++), the explanation says so explicitly.  If the description for a particular option does not
+mention a source language, you can use that option with all supported languages.
 
-Lily-like, white as snow,
-She hardly knew
-She was a woman, so
-Sweetly she grew.
+The gcc program accepts options and file names as operands.  Many options have multi-letter names; therefore multiple
+single-letter options may not be grouped: -dv is very different from -d -v.
 
-Coffin-board, heavy stone,
-Lie on her breast,
-I vex my heart alone,
-She is at rest.
+You can mix options and other arguments.  For the most part, the order you use doesn't matter.  Order does matter when you
+use several options of the same kind; for example, if you specify -L more than once, the directories are searched in the
+order specified.  Also, the placement of the -l option is significant.
 
-Peace, Peace, she cannot hear
-Lyre or sonnet,
-All my life's buried here,
-Heap earth upon it.
+Many options have long names starting with -f or with -W---for example, -fmove-loop-invariants, -Wformat and so on.  Most
+of these have both positive and negative forms; the negative form of -ffoo is -fno-foo.  This manual documents only one of
+these two forms, whichever one is not the default.
