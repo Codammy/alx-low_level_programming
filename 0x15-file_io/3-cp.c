@@ -112,7 +112,7 @@ void _write(int fd, int n, char *buf, char *file)
 
 	if (len < 0)
 	{
-		dprintf(2, "%s %s\n", "Error: Can't write to file", file);
+		dprintf(STDERR_FILENO, "%s %s\n", "Error: Can't write to ", file);
 		free(buf);
 		_close(fd);
 		exit(99);
