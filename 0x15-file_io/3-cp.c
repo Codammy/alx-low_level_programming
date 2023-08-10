@@ -55,7 +55,7 @@ int _open(char *file, int action)
 		fd = open(file, O_RDONLY);
 		if (fd < 0)
 		{
-			dprintf(2, "%s %s\n", "Error: Can't read from file", file);
+			dprintf(STDOUT_FILENO, "%s %s\n", "Error: Can't read from file", file);
 			exit(98);
 		}
 	}
@@ -67,7 +67,7 @@ int _open(char *file, int action)
 			fd = open(file, O_WRONLY |  O_CREAT, 0664);
 			if (fd < 0)
 			{
-			dprintf(2, "%s %s\n", "Error: Can't write to", file);
+			dprintf(STDOUT_FILENO, "%s %s\n", "Error: Can't write to", file);
 			exit(99);
 			}
 		}
@@ -90,7 +90,7 @@ int _read(int fd, char *file, char **buf)
 	len = read(fd, *buf, 1024);
 	if (len < 0)
 	{
-		dprintf(2, "%s %s\n", "Error: Can't read from file", file);
+		dprintf(STDOUT_FILENO, "%s %s\n", "Error: Can't read from file", file);
 		free(buf);
 		_close(fd);
 		exit(98);
@@ -112,7 +112,7 @@ void _write(int fd, int n, char *buf, char *file)
 
 	if (len < 0)
 	{
-		dprintf(2, "%s %s\n", "Error: Can't write to", file);
+		dprintf(STDOUT_FILENO, "%s %s\n", "Error: Can't write to", file);
 		free(buf);
 		_close(fd);
 		exit(99);
@@ -130,7 +130,7 @@ void  _close(int fd)
 
 	if (c != 0)
 	{
-		dprintf(2, "%s %d\n", "Error: Can't close fd", fd);
+		dprintf(STDOUT_FILENO, "%s %d\n", "Error: Can't close fd", fd);
 		exit(100);
 	}
 }
