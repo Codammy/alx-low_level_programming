@@ -67,7 +67,7 @@ int _open(char *file, int action)
 			fd = open(file, O_WRONLY |  O_CREAT, 0664);
 			if (fd < 0)
 			{
-			dprintf(2, "%s %s\n", "Error: Can't write to file", file);
+			dprintf(2, "%s %s\n", "Error: Can't write to", file);
 			exit(99);
 			}
 		}
@@ -112,7 +112,7 @@ void _write(int fd, int n, char *buf, char *file)
 
 	if (len < 0)
 	{
-		dprintf(STDERR_FILENO, "%s %s\n", "Error: Can't write to ", file);
+		dprintf(2, "%s %s\n", "Error: Can't write to", file);
 		free(buf);
 		_close(fd);
 		exit(99);
