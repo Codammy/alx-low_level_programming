@@ -91,7 +91,7 @@ int _read(int fd, char *file, char **buf)
 	if (len < 0)
 	{
 		dprintf(STDERR_FILENO, "%s %s\n", "Error: Can't read from file", file);
-		free(buf);
+		free(*buf);
 		_close(fd);
 		exit(98);
 	}
