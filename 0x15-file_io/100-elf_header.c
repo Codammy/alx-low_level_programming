@@ -14,8 +14,10 @@ void print_error(const char *message) {
 }
 
 void print_elf_header_info(Elf64_Ehdr *elf_header) {
+	int i;
+
     printf("Magic: ");
-    for (int i = 0; i < EI_NIDENT; ++i) {
+    for (i = 0; i < EI_NIDENT; ++i) {
         printf("%02x ", elf_header->e_ident[i]);
     }
     printf("\nClass: %s\n", elf_header->e_ident[EI_CLASS] == ELFCLASS32 ? "ELF32" : "ELF64");
@@ -24,22 +26,26 @@ void print_elf_header_info(Elf64_Ehdr *elf_header) {
     printf("OS/ABI: %s\n", elf_header->e_ident[EI_OSABI] == ELFOSABI_SYSV ? "UNIX - System V" : "Others");
     printf("ABI Version: %d\n", elf_header->e_ident[EI_ABIVERSION]);
     printf("Type: %d\n", elf_header->e_type);
-    printf("Entry point address: 0x%llx\n", (long long)elf_header->e_entry);
+    printf("Entry point address: 0x%ld\n", (long)elf_header->e_entry);
 }
 
 int main(int argc, char *argv[]) {
+	char *filename;
+	ssize_t bytes_read;
+	int fd;
+	Elf64_Ehdr elf_header;
+
     if (argc != 2) {
         print_error("Usage: elf_header elf_filename");
     }
 
-    const char *filename = argv[1];
-    int fd = open(filename, O_RDONLY);
+    filename = argv[1];
+    fd = open(filename, O_RDONLY);
     if (fd == -1) {
         print_error("Could not open the file");
     }
 
-    Elf64_Ehdr elf_header;
-    ssize_t bytes_read = read(fd, &elf_header, sizeof(elf_header));
+    bytes_read = read(fd, &elf_header, sizeof(elf_header));
     if (bytes_read != sizeof(elf_header)) {
         print_error("Failed to read ELF header");
     }
