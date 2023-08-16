@@ -1,13 +1,34 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * get_bit - returns the value of a bit at a given index.
+ * get_bit - returns the value of a bit at a given index
  *
- * @n: dec number
- * @index: index is the index, starting from 0
- * Return: val at index or -1
+ * @n: number
+ * @index: index to get
+ * Return: bit
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
+	unsigned long int ref = n, len = -1, i = 0, num;
 
+	while (ref > 0)
+	{
+		ref >>= 1;
+		len++;
+	}
+	if (index > len)
+		return (-1);
+	num = 1 << (index);
+	while (i <= len)
+	{
+		if (i == index)
+		{
+			if (n & num)
+				return (1);
+			return (0);
+		}
+		i++;
+	}
+	return (0);
 }
