@@ -1,4 +1,5 @@
 #!/bin/bash
 git add .
 git commit -m "modified $(ls -t | head -1)"
+git commit -m "$(ls -t | head -1)"
 git push
