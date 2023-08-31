@@ -7,11 +7,19 @@
  */
 void print_binary(unsigned long int n)
 {
+	int tmp = n, m = 0;
+
 	if (n == 0)
 		_putchar('0');
-	while (n > 0)
+	while (tmp > 0)
 	{
-		n & 1 ? _putchar('1') : _putchar('0');
-		n >>= 1;
+		tmp >>= 1;
+		m++;
+	}
+	m = 1 << (m - 1);
+	while (m > 0)
+	{
+		n & m ? _putchar('1') : _putchar('0');
+		m >>= 1;
 	}
 }
