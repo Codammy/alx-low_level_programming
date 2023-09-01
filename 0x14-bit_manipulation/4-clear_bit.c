@@ -5,7 +5,7 @@
  *
  *  @n: number to set
  *  @index: index to set
- *  Return: new number
+ *  Return: 1 on success
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
@@ -13,5 +13,5 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	num = ~(1 << index);
 	*n = *n & num;
-	return (*n);
+	return (1);
 }
