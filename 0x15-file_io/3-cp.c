@@ -71,6 +71,8 @@ int main(int ac, char **av)
 		if (write(fd2, buf, n) == -1)
 			writeerror(av[2], NULL);
 		n = read(fd1, buf, 1024);
+		if (n == -1)
+			readerror(av[1], buf);
 	}
 	free(buf);
 	if (close(fd1) == -1)
