@@ -1,5 +1,5 @@
 # C - Doubly linked lists
-[![ C ]()   [![ Algorithm ]()   [![ Data structure ]()
+[![ C ]]()   [![ Algorithm ]]()  [![ Data structure ]]()
 
 ## Resources
 **Read or watch:**
@@ -14,7 +14,8 @@ __At the end of this project, you are expected to be able to explain to anyone, 
 + Understand and know how to implement the various operations (deletion, insertion, etc) with doubly linked lists
 + Start to look for the right source of information without too much help
 
-```
+## Data structure to use
+```c
 /**
 * struct dlistint_s - doubly linked list
 * @n: points to the previous node
