@@ -6,8 +6,8 @@ NAME = school
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-%(OBJ): %.c
-	$(CC) -c $<
+$(OBJ): $(SRC)
+	$(CC) -c $(SRC)
 
 # main.o: main.c
 #	$(CC) -c main.c
