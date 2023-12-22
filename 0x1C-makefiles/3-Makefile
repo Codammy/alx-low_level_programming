@@ -23,6 +23,5 @@ fclean:
 	-$(RM) $(OBJ)
 
 re:
-	@# $(CC) -c main.c
-	$(CC) -c $(SRC)
+	$(CC) -c %.c
 	$(CC) $(OBJ) -o $(NAME)
