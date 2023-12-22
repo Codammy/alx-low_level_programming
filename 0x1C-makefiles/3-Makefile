@@ -23,5 +23,6 @@ fclean:
 	-$(RM) $(OBJ)
 
 re:
-	$(CC) -c %.c
+	$(CC) -c main.c
+	$(CC) -c school.c
 	$(CC) $(OBJ) -o $(NAME)
