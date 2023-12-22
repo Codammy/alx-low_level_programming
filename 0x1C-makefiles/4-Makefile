@@ -22,7 +22,5 @@ oclean:
 fclean:
 	-$(RM) *~ .*.swp .*.swo $(NAME)
 	-$(RM) $(OBJ)
-re:
-	@# $(CC) -c main.c
-	$(CC) -c $(CFLAGS) $(SRC)
+re: $(SRC)
 	$(CC) $(OBJ) -o $(NAME)
