@@ -22,7 +22,6 @@ fclean:
 	-$(RM) *~ .*.swp .*.swo $(NAME)
 	-$(RM) $(OBJ)
 
-re:
-	$(CC) -c main.c
-	$(CC) -c school.c
-	$(CC) $(OBJ) -o $(NAME)
+#re:
+#	$(CC) -c $(SRC)
+#	$(CC) $(OBJ) -o $(NAME)
