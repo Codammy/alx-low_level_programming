@@ -23,5 +23,5 @@ fclean:
 	-$(RM) $(OBJ)
 
 re:
-#	$(CC) -c $(SRC)
+	$(CC) -c $(SRC)
 	$(CC) $(OBJ) -o $(NAME)
