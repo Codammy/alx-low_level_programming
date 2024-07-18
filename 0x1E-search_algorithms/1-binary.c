@@ -21,11 +21,17 @@ int binary_search(int *array, size_t size, int value)
 		cur = *(array + mid);
 
 		if (cur == value)
+		{
 			return (mid);
+		}
 		else if (cur <= value)
+		{
 			left = mid + 1;
+		}
 		else
+		{
 			right = mid - 1;
+		}
 	}
 	return (-1);
 }
@@ -46,7 +52,9 @@ void print_search(int *arr, unsigned int left, unsigned int right)
 	{
 		printf("%d", arr[i]);
 		if (i < right)
+		{
 			printf(", ");
+		}
 	}
 	putchar('\n');
 }
