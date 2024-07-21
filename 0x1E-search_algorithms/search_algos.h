@@ -1,6 +1,6 @@
 #ifndef SEARCH_ALGOS
 #define SEARCH_ALGOS
-
+#include <stddef.h>
 /**
  * struct listint_s - singly linked list
  *
@@ -42,5 +42,6 @@ int exponential_search(int *array, size_t size, int value);
 int advanced_binary(int *array, size_t size, int value);
 void print_search(int *arr, unsigned int left, unsigned int right);
 listint_t *jump_list(listint_t *list, size_t size, int value);
+int jump_search(int *array, size_t size, int value);
 skiplist_t *linear_skip(skiplist_t *list, int value);
 #endif
