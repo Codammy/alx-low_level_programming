@@ -14,6 +14,8 @@ int binary_search(int *array, size_t size, int value)
 	unsigned int mid, left = 0, right = size - 1;
 	int cur;
 
+	if (!array)
+		return (-1);
 	while (left <= right)
 	{
 		print_search(array, left, right);
